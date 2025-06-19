@@ -11,28 +11,32 @@
 
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="nav-brand">
-        <h1><i class="fas fa-bolt"></i> Parv Holidays</h1>
-      </div>
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="nav-actions">
-        <button class="search-btn"><i class="fas fa-search"></i></button>
-        <button class="cart-btn" onclick="toggleCart()">
-          <i class="fas fa-shopping-cart"></i>
-          <span class="cart-count">0</span>
-        </button>
-      </div>
+<header class="parv-header">
+  <div class="parv-header-container">
+    <div class="parv-header-brand">
+      <a href="#home">
+        <img src="parvlogo.png" alt="Parv Holidays Logo" class="parv-header-logo">
+      </a>
     </div>
-  </header>
+    <nav class="parv-header-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Packages</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="parv-header-actions">
+      <button class="parv-search-btn"><i class="fas fa-search"></i></button>
+      <button class="parv-cart-btn" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="parv-cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
 
   <!-- Hero Slider -->
   <section class="hero-slider" id="home">
@@ -85,64 +89,93 @@
   <!-- Categories -->
   <section class="categories">
     <div class="container">
-      <h2 class="section-title">Shop by Category</h2>
+      <h2 class="section-title">Browse by Destination</h2>
       <div class="category-grid">
-        <div class="category-card" onclick="filterProducts('phones')">
-          <i class="fas fa-mobile-alt"></i>
-          <h3>Smartphones</h3>
+        <div class="category-card"><i class="fas fa-hotel"></i>
+          <h3>Luxury</h3>
         </div>
-        <div class="category-card" onclick="filterProducts('laptops')">
-          <i class="fas fa-laptop"></i>
-          <h3>Laptops</h3>
+        <div class="category-card"><i class="fas fa-umbrella-beach"></i>
+          <h3>Beach</h3>
         </div>
-        <div class="category-card" onclick="filterProducts('audio')">
-          <i class="fas fa-headphones"></i>
-          <h3>Audio</h3>
+        <div class="category-card"><i class="fas fa-mountain"></i>
+          <h3>Mountains</h3>
         </div>
-        <div class="category-card" onclick="filterProducts('accessories')">
-          <i class="fas fa-plug"></i>
-          <h3>Accessories</h3>
+        <div class="category-card"><i class="fas fa-spa"></i>
+          <h3>Wellness</h3>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Products -->
-  <section class="products" id="products">
-    <div class="container">
-      <div class="products-header">
-        <h2 class="section-title">Tour Packages</h2>
-        <div class="filter-buttons">
-          <button class="filter-btn active" onclick="filterProducts('all')">All</button>
-          <button class="filter-btn" onclick="filterProducts('phones')">New</button>
-          <button class="filter-btn" onclick="filterProducts('laptops')">Exclusive</button>
-          <button class="filter-btn" onclick="filterProducts('audio')">Discounts</button>
-          <button class="filter-btn" onclick="filterProducts('accessories')">Best Deal</button>
-        </div>
+  <section class="tour-cards-section">
+    <div class="tour-cards-container">
+      <!-- Card 1 -->
+      <div class="tour-card">
+        <img src="tajmahal2.jpg" alt="">
+        <h3>Hotels in Agra at Best Price</h3>
+        <p>Experience the serenity of the Himalayas with our 3-day Manali tour.</p>
+        <a href="https://wa.link/9wf7d2" target="_blank" class="tour-btn">Get Best Deal</a>
       </div>
-      <div class="product-grid" id="productGrid">
-        <!-- Products will be dynamically loaded here -->
+
+      <!-- Card 2 -->
+      <div class="tour-card">
+        <img src="thailand.jpg" alt="s">
+        <h3>Thailand Tour packages</h3>
+        <p>Enjoy sun, sand, and waves in our 4-day premium Goa package.</p>
+        <a href="https://wa.link/9wf7d2" target="_blank" class="tour-btn">Get Best Deal</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="tour-card">
+        <img src="indiagate.jpg" alt="d">
+        <h3>Delhi Tour packages</h3>
+        <p>Explore the royal forts and palaces of Jaipur and Udaipur.</p>
+        <a href="https://wa.link/9wf7d2" target="_blank" class="tour-btn">Get Best Deal</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="tour-card">
+        <img src="hawamahal.jpg" alt="Tour Place 4">
+        <h3>Rajasthan Tour packages</h3>
+        <p>Relax in houseboats and explore the lush greenery of Kerala.</p>
+        <a href="https://wa.link/9wf7d2" target="_blank" class="tour-btn">Get Best Deal</a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="tour-card">
+        <img src="maldives.jpg" alt="Tour Place 5">
+        <h3>Goa Tour packages</h3>
+        <p>Unforgettable bike trip through the majestic mountains of Ladakh.</p>
+        <a href="https://wa.link/9wf7d2" target="_blank" class="tour-btn">Get Best Deal</a>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="tour-card">
+        <img src="masoorie.jpg" alt="Tour Place 6">
+        <h3>Nainital Tour packages</h3>
+        <p>Scuba dive, snorkel, and chill in this tropical island paradise.</p>
+        <a href="https://wa.link/9wf7d2" target="_blank" class="tour-btn">Get Best Deal</a>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="tour-card">
+        <img src="london.jpg" alt="Tour Place 7">
+        <h3>Hotels in Europe at Best price</h3>
+        <p>Sip tea in the hills and witness the sunrise at Tiger Hill.</p>
+        <a href="https://wa.link/9wf7d2" target="_blank" class="tour-btn">Get Best Deal</a>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="tour-card">
+        <img src="dubai.jpg" alt="Tour Place 8">
+        <h3>Explore Dubai with us</h3>
+        <p>One-day luxury trip to the majestic Taj Mahal in Agra.</p>
+        <a href="https://wa.link/9wf7d2" target="_blank" class="tour-btn">Get Best Deal</a>
       </div>
     </div>
   </section>
 
-  <!-- Shopping Cart -->
-  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
-  <div class="cart-sidebar" id="cartSidebar">
-    <div class="cart-header">
-      <h3>Shopping Cart</h3>
-      <button class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="cart-items" id="cartItems">
-      <!-- Cart items will be dynamically loaded here -->
-    </div>
-    <div class="cart-footer">
-      <div class="cart-total">
-        <strong>Total: $<span id="cartTotal">0.00</span></strong>
-      </div>
-      <button class="checkout-btn">Proceed to Checkout</button>
-    </div>
-  </div>
 
   <!-- Product Modal -->
   <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
@@ -155,7 +188,7 @@
         </div>
         <div class="modal-details">
           <h2 id="modalTitle"></h2>
-          <p class="modal-price">$<span id="modalPrice"></span></p>
+          <p class="modal-price"><span id="modalPrice"></span></p>
           <p id="modalDescription"></p>
           <div class="modal-actions">
             <div class="quantity-selector">
@@ -163,8 +196,10 @@
               <span id="modalQuantity">1</span>
               <button onclick="changeQuantity(1)">+</button>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCartFromModal()">Add to Cart</button>
+            <a href="https://wa.link/8j5dnl" class="add-to-cart-btn" target="_blank"
+              style="text-align:center; text-decoration:none;">Get Best Deal</a>
           </div>
+
         </div>
       </div>
     </div>
@@ -180,7 +215,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h3><i class="fas fa-bolt"></i> Parv Holidays and Travel</h3>
+          <h3> Parv Holidays and Travel</h3>
           <p>Your trusted partner for premium electronics and cutting-edge technology.</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook"></i></a>

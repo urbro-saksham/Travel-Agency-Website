@@ -2,8 +2,8 @@
 const products = [
     {
         id: 1,
-        name: "Rajasthan",
-        price: 999,
+        name: "Rajasthan Packages",
+        price: "contact us to know the prices",
         category: "phones",
         image: "thailand.jpg",
         description: "The most advanced iPhone ever with titanium design and A17 Pro chip.",
@@ -13,7 +13,7 @@ const products = [
     },
     {
         id: 2,
-        name: "MacBook Pro M3",
+        name: "Dubai Packages",
         price: 1999,
         category: "laptops",
         image: "dubai.jpg",
@@ -24,7 +24,7 @@ const products = [
     },
     {
         id: 3,
-        name: "AirPods Pro",
+        name: "Agra Packages",
         price: 249,
         category: "audio",
         image: "tajmahal2.jpg",
@@ -35,7 +35,7 @@ const products = [
     },
     {
         id: 4,
-        name: "iPad Air",
+        name: "Delhi Packages",
         price: 599,
         category: "accessories",
         image: "indiagate.jpg",
@@ -46,7 +46,7 @@ const products = [
     },
     {
         id: 5,
-        name: "Samsung Galaxy S24",
+        name: "Rajasthan Packages",
         price: 899,
         category: "phones",
         image: "hawamahal.jpg",
@@ -57,7 +57,7 @@ const products = [
     },
     {
         id: 6,
-        name: "Dell XPS 13",
+        name: "Goa Packages",
         price: 1299,
         category: "laptops",
         image: "maldives.jpg",
@@ -68,7 +68,7 @@ const products = [
     },
     {
         id: 7,
-        name: "Sony WH-1000XM5",
+        name: "Naninatal Tour Packages",
         price: 399,
         category: "audio",
         image: "masoorie.jpg",
@@ -79,10 +79,21 @@ const products = [
     },
     {
         id: 8,
-        name: "Apple Watch Series 9",
+        name: "Singapore Packages",
         price: 399,
         category: "accessories",
         image: "singapore.png",
+        description: "Most advanced Apple Watch with new health features.",
+        rating: 4.7,
+        reviews: 1100,
+        badge: "New"
+    },
+    {
+        id: 9,
+        name: "Best hotels in Europe",
+        price: 399,
+        category: "accessories",
+        image: "london.jpg",
         description: "Most advanced Apple Watch with new health features.",
         rating: 4.7,
         reviews: 1100,
@@ -330,17 +341,26 @@ function toggleCart() {
 
 // Modal functionality
 function openProductModal(product) {
-    currentProduct = product;
-    modalQuantity = 1;
-    
-    document.getElementById('modalImage').src = product.image;
-    document.getElementById('modalTitle').textContent = product.name;
-    document.getElementById('modalPrice').textContent = product.price;
-    document.getElementById('modalDescription').textContent = product.description;
-    document.getElementById('modalQuantity').textContent = modalQuantity;
-    
-    document.getElementById('productModal').classList.add('active');
-    document.getElementById('modalOverlay').classList.add('active');
+  currentProduct = product;
+  modalQuantity = 1;
+
+  document.getElementById('modalImage').src = product.image;
+  document.getElementById('modalTitle').textContent = product.name;
+  document.getElementById('modalPrice').textContent = product.price;
+  document.getElementById('modalDescription').textContent = product.description;
+
+  const modalActions = document.querySelector('.modal-actions');
+  modalActions.innerHTML = `
+    <div class="quantity-selector">
+      <button onclick="changeQuantity(-1)">-</button>
+      <span id="modalQuantity">${modalQuantity}</span>
+      <button onclick="changeQuantity(1)">+</button>
+    </div>
+    <a href="https://wa.link/8j5dnl" class="add-to-cart-btn" target="_blank" style="text-align:center; text-decoration:none;">Get Best Deal</a>
+  `;
+
+  document.getElementById('productModal').classList.add('active');
+  document.getElementById('modalOverlay').classList.add('active');
 }
 
 function closeModal() {
