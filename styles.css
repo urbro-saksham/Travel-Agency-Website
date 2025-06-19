@@ -4,6 +4,46 @@
     box-sizing: border-box;
 }
 
+.floating-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.floating-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.floating-icon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .floating-icon {
+    width: 60px;
+    height: 60px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .floating-icon img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -99,7 +139,7 @@ body {
 .hero-slider {
     margin-top: 80px;
     position: relative;
-    height: 600px;
+    height: 550px;
     overflow: hidden;
 }
 
@@ -116,7 +156,19 @@ body {
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: url('ayodhya.png'); /* Update path if needed */
+}
+
+#one {
+  color: white,
+}
+
+#two {
+  color: rgb(61, 51, 51)
+}
+
+#three {
+  color: rgb(61, 51, 51)
 }
 
 .slide.active {
@@ -124,11 +176,11 @@ body {
 }
 
 .slide:nth-child(2) {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background-image: url('tajmahal.png'); /* Update path if needed */
 }
 
 .slide:nth-child(3) {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background-image: url('mountain.png'); /* Update path if needed */
 }
 
 .slide-content {
