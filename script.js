@@ -5,7 +5,7 @@ const products = [
         name: "Rajasthan Packages",
         price: "contact us to know the prices",
         category: "phones",
-        image: "thailand.jpg",
+        image: "Images/hawamahal.jpg",
         description: "The most advanced iPhone ever with titanium design and A17 Pro chip.",
         rating: 4.8,
         reviews: 1250,
